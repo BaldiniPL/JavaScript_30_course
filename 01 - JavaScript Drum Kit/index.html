@@ -47,18 +47,52 @@
     </div>
   </div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="65" src="sounds/clap.wav" id="clap"></audio>
+  <audio data-key="83" src="sounds/hihat.wav" id="hihat"></audio>
+  <audio data-key="68" src="sounds/kick.wav" id="kick"></audio>
+  <audio data-key="70" src="sounds/openhat.wav" id="openhat"></audio>
+  <audio data-key="71" src="sounds/boom.wav" id="boom"></audio>
+  <audio data-key="72" src="sounds/ride.wav" id="ride"></audio>
+  <audio data-key="74" src="sounds/snare.wav" id="snare"></audio>
+  <audio data-key="75" src="sounds/tom.wav" id="tom"></audio>
+  <audio data-key="76" src="sounds/tink.wav" id="clap"></audio>
 
 <script>
+const keys = document.querySelectorAll('.key');
+document.addEventListener('keydown', function(e) {
+  if (e.keyCode == 65) {
+    document.getElementById('clap').play();
+    key.classList.add('playing');
+  }
+
+  if (e.keyCode == 83) {
+    document.getElementById('hihat').play();
+  }
+  if (e.keyCode == 68) {
+    document.getElementById('kick').play();
+  }
+  if (e.keyCode == 70) {
+    document.getElementById('openhat').play();
+  }
+  if (e.keyCode == 71) {
+    document.getElementById('boom').play();
+  }
+  if (e.keyCode == 72) {
+    document.getElementById('ride').play();
+  }
+  if (e.keyCode == 74) {
+    document.getElementById('snare').play();
+  }
+  if (e.keyCode == 75) {
+    document.getElementById('tom').play();
+  }
+  if (e.keyCode == 76) {
+    document.getElementById('clap').play();
+  }
+});
+
 </script>
+ 
 
 
 </body>
