@@ -1,0 +1,28 @@
+body {
+    background: url(img/lights-party-dancing-music.jpg) no-repeat fixed center;
+}
+
+kbd{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    color: #48b1ba;
+    padding: 15px;
+}
+
+.key{
+    float: left;
+    border: 3px solid rgb(48, 46, 46);
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px;
+} 
+
+.keys{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+}
