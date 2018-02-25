@@ -14,11 +14,17 @@
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
+    <label for="grayscale">Gray Scale:</label>
+    <input id="gray" type="range" name="gray" min="0" max="100%" value="10" data-sizing="%">
+
+    <label for="opacity">Opacity:</label>
+    <input id="opacity" type="range" name="opacity" min="0" max="100%" value="10" data-sizing="%">
+
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://vignette.wikia.nocookie.net/counter-strike-global-offensive/images/0/05/Virtus.pro_-_logo.png/revision/latest/scale-to-width-down/480?cb=20150729170230&path-prefix=pl">
 
   <style>
 
@@ -26,14 +32,17 @@
       --base: #8b0c00;
       --spacing: 10px;
       --blur: 10px;
+      --gray: 10%;
+      --opacity: 10%;
     } 
 
 
     img {
       padding: var(--spacing);
       background: var(--base);
-      filter: blur(var(--blur));
-
+      filter: blur(var(--blur)) 
+              grayscale(var(--gray)) 
+              opacity(var(--opacity));
     }
 
 
@@ -65,6 +74,7 @@
     function handleUpdate(){
       const suffix = this.dataset.sizing || '';
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+      
     }
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
