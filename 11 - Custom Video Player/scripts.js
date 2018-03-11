@@ -5,6 +5,7 @@ const progressBar = player.querySelector('.progress__filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
+const fullScreenButton = player.querySelector('.full');
 
 /*Build out functions */
 function togglePlay(){
@@ -59,4 +60,8 @@ progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
 
-//make FULL SCREEN BUTTON ALSO!
+//make FULL SCREEN BUTTON ALSO! tried, not for me now... :()
+
+function Fscreen(fullScreen){
+        
+}
