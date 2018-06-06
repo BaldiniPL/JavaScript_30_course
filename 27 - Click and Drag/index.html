@@ -31,8 +31,7 @@
     <div class="item item22">22</div>
     <div class="item item23">23</div>
     <div class="item item24">24</div>
-    <div class="item item25">25</div>
-  </div>
+ </div>
 
 <script>
     const slider = document.querySelector('.items');
@@ -49,7 +48,7 @@
 
     slider.addEventListener('mouseleave', () => {
         isDown = false;
-        slider.classList.add('active');
+        slider.classList.remove('active');
     });
 
     slider.addEventListener('mouseup', () => {
@@ -64,12 +63,7 @@
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 2.3;
         slider.scrollLeft = scrollLeft - walk;
-
     });
-
-
-
-
 </script>
 
   </body>
